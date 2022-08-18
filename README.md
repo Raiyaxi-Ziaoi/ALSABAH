@@ -22,3 +22,7 @@ PSS: Starts a one-line comment; "PSS 🗿"<br/>
 CHP: Prints a character given an indice of the value in question on the stack<br/>
 RGP: Prints a character given the register number<br/>
 MRG: Adds multiple registers; "MRG 10"<br/>
+JMP: Jumps to a specific line; "JMP 10"<br/>
+IF?: If Register is one it jumps to line specified; "IF 0 10"<br/>
+INC: Increments register by one; "INC 0"<br/>
+INP: Input to register; "INP 0"<br/>

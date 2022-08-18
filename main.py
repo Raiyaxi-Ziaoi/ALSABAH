@@ -61,6 +61,15 @@ def main():
                 break
             case "PSS":
                 print("", end="")
+            case "JMP":
+                ip = (int)(token[1]) - 2
+            case "IF?":
+                if registers[(int)(token[1])] == 1:
+                    ip = (int)(token[2]) - 2
+            case "INC":
+                registers[(int)(token[1])] += 1
+            case "INP":
+                registers[(int)(token[1])] = (int)(input())
             case other:
                 print("Unknown operation! : " + token[0])
         if ip < len(text):
