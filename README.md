@@ -2,10 +2,11 @@
 
 # ALSABAH
 
-<div align="center"><h2><br/><br/>
- An assembly-ish thing intended to be used as a helper language for ALNOOR<br/><br/>Made by Raiyaxi Ziaoi
+<div align="center"><h2>
+An assembly-ish thing intended to be used as a helper language for ALNOOR<br/><br/><a href="#">
+    <img src="https://i.imgur.com/l2ImBSQ.png" width="50%"/>
+</a><br/><br/>Made by Raiyaxi Ziaoi
 </h2></div>
-<br>
 
 Keywords: <br/>
 REG: Creates a new register; "REG"<br/>
