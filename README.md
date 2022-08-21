@@ -3,7 +3,7 @@
 # ALSABAH
 
 <div align="center"><h2><br/><br/>
- An assembly-ish thing intended to be a compile target for future versions of ALNOOR<br/><br/>Made by Raiyaxi Ziaoi
+ An assembly-ish thing intended to be used as a helper language for ALNOOR<br/><br/>Made by Raiyaxi Ziaoi
 </h2></div>
 <br>
 
