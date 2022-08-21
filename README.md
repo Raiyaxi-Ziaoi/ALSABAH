@@ -4,7 +4,7 @@
 
 <div align="center"><h2>
 An assembly-ish thing intended to be used as a helper language for ALNOOR<br/><br/><a href="#">
-    <img src="https://i.imgur.com/l2ImBSQ.png" width="50%"/>
+    <img src="https://i.imgur.com/5A1Jup6.png" width="50%"/>
 </a><br/><br/>Made by Raiyaxi Ziaoi
 </h2></div>
 
