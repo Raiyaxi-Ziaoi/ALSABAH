@@ -16,4 +16,6 @@ EXT: Exits program; "EXT"<br/>
 PSH: Push value to stack; "PSH, 5"<br/>
 ADD: Adds the last two values in the stack together; "ADD"<br/>
 STS: Sets register value from last value in the stack; "STS, 0"<br/>
-JMP: Jumps to line specified; "JMP, 0"<br/>
+STR: Sets stack value from specified value in the register; "STR, 0"<br/>
+JMP: Jumps to marker specified; "JMP, A"<br/>
+MRK: Marker for JMP; "MRK, A"<br/>

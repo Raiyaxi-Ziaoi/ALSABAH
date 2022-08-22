@@ -40,9 +40,11 @@ def main():  # Main function
                 stack.pop(-1)
                 stack.pop(-1)
                 stack.append(result)
-            case "STS":  # Set register from stack
+            case "STR":  # Set register from stack
                 registers[(int)(token[1])] = stack[-1]
                 stack.pop(-1)
+            case "STS":  # Set stack from register
+                stack.append(registers[(int)(token[1])])
             case "INP":  # Takes input and stores in register
                 registers[(int)(token[1])] = input()
             case "EXT":  # Exit

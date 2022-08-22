@@ -3,11 +3,16 @@ def main():  # Main function
     text = []  # File contents
     stack = []  # Stack
     registers = []  # Registers
-    # sp = 0
+    gotos = []
     ip = 0  # Instruction pointer
     print("Please enter a filename: ")
     with open(input(), "r") as f:   # Open file
         text = f.readlines()        # Read contents to 'text' as a list
+    for x in range(text.length()):  # Loop (for gotos)
+        token = text[ip].split(', ')  # Tokens split by ", "
+        if token[0].replace('\n', '') == "MRK":
+            gotos.append(token[1] + ", " + ip)
+    ip = 0
     while True:  # Loop
         token = text[ip].split(', ')  # Tokens split by ", "
         ftoken = token[0].replace('\n', '')  # Clean first token
@@ -48,8 +53,12 @@ def main():  # Main function
             case "STS":  # Set register from stack
                 registers[(int)(token[1])] = stack[-1]
                 stack.pop(-1)
-            case "JMP":  # Jumps to line
-                ip = (int)(token[1]) - 1
+            case "JMP":  # Jumps to marker
+                i = 0
+                while True:
+                    if gotos[i].split(", ")[0] == token[1]:
+                        ip = (int)(gotos[i].split(", ")[1])
+                    i += 1
             case "INP":  # Takes input and stores in register
                 registers[(int)(token[1])] = input()
             case "EXT":  # Exit
