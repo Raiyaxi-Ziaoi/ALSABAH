@@ -1,10 +1,11 @@
-<img src="https://i.imgur.com/lRzzpEU.png"></img>
+<img src="https://raw.githubusercontent.com/Raiyaxi-Ziaoi/Resources/main/bismillah.png?token=GHSAT0AAAAAABXCMKG533RUMQ4V6F5TPBJWYYH3CRQ
+"></img>
 
 # ALSABAH
 
 <div align="center"><h2>
 An assembly-ish thing intended to be used as a helper language for ALNOOR<br/><br/><a href="#">
-    <img src="https://i.imgur.com/5A1Jup6.png" width="50%"/>
+    <img src="https://raw.githubusercontent.com/Raiyaxi-Ziaoi/Resources/main/alsabahlogo.png?token=GHSAT0AAAAAABXCMKG55OJFNHXZ5GYECFWIYYH3IBA" width="50%"/>
 </a><br/><br/>Made by Raiyaxi Ziaoi
 </h2></div>
 
