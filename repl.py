@@ -12,9 +12,15 @@ def main():  # Main function
             case "SET":  # Set register to value
                 registers[(int)(token[1])] = token[2].replace("\"", "")
             case "OUT":  # Output contentes of register
-                print(registers[(int)(token[1])])
+                if token[1].startswith("$"):
+                    print(registers[(int)(token[1])])
+                else:
+                    print(token[1])
             case "PSH":  # Push value to stack
-                stack.append(token[1])
+                if token[1].startswith("$"):
+                    stack.append(registers[(int)(token[1])])
+                else:
+                    stack.append(token[1])
             case "ADD":  # Adds last two stack values
                 result = (int)(stack[-1]) + (int)(stack[-2])
                 stack.pop(-1)
@@ -40,11 +46,6 @@ def main():  # Main function
                 stack.pop(-1)
                 stack.pop(-1)
                 stack.append(result)
-            case "STR":  # Set register from stack
-                registers[(int)(token[1])] = stack[-1]
-                stack.pop(-1)
-            case "STS":  # Set stack from register
-                stack.append(registers[(int)(token[1])])
             case "INP":  # Takes input and stores in register
                 registers[(int)(token[1])] = input()
             case "EXT":  # Exit

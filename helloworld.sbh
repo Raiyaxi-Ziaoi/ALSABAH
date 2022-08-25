@@ -1,6 +1,2 @@
-REG
-SET, 0, "Hello World!"
-MRK, A
-OUT, 0
-JMP, A
+OUT, "Hello World!"
 EXT
