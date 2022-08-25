@@ -8,10 +8,10 @@ def main():  # Main function
     print("Please enter a filename: ")
     with open(input(), "r") as f:   # Open file
         text = f.readlines()        # Read contents to 'text' as a list
-    for x in range(text.length()):  # Loop (for gotos)
-        token = text[ip].split(', ')  # Tokens split by ", "
+    for x in range(len(text)):  # Loop (for gotos)
+        token = text[x].split(', ')  # Tokens split by ", "
         if token[0].replace('\n', '') == "MRK":
-            gotos.append(token[1] + ", " + ip)
+            gotos.append(token[1] + ", " + (str)(x))
     ip = 0
     while True:  # Loop
         token = text[ip].split(', ')  # Tokens split by ", "
@@ -20,9 +20,10 @@ def main():  # Main function
             case "REG":  # Create empty register
                 registers.append('0')
             case "SET":  # Set register to value
-                registers[(int)(token[1])] = token[2].replace("\"", "")
+                registers[(int)(token[1])] = token[2]
             case "OUT":  # Output contentes of register
-                print(registers[(int)(token[1])])
+                print(registers[(int)(token[1])].replace(
+                    "\\n", "\n").replace("\\t", "\t").replace("\\n", "\n").replace("\"", ""))
             case "PSH":  # Push value to stack
                 stack.append(token[1])
             case "ADD":  # Adds last two stack values
@@ -53,9 +54,13 @@ def main():  # Main function
             case "STS":  # Set register from stack
                 registers[(int)(token[1])] = stack[-1]
                 stack.pop(-1)
+            case "MRK":
+                pass
             case "JMP":  # Jumps to marker
                 i = 0
                 while True:
+                    if i == len(gotos):
+                        break
                     if gotos[i].split(", ")[0] == token[1]:
                         ip = (int)(gotos[i].split(", ")[1])
                     i += 1
