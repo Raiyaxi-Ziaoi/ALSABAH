@@ -72,61 +72,14 @@ def main():  # Main function
                 registers[(int)(token[1])] = input()
             case "IF?":
                 if token[1].startswith("$"):
-                    if token[3].startswith("$"):
-                        if token[2] == "==":
-                            if registers[(int)(token[1].replace("$", ""))] == registers[(int)(token[3].replace("$", ""))]:
-                                i = 0
-                                while True:
-                                    if i == len(gotos):
-                                        break
-                                    if gotos[i].split(", ")[0] == token[4]:
-                                        ip = (int)(gotos[i].split(", ")[1])
-                                    i += 1
-                        elif token[2] == "!=":
-                            if registers[(int)(token[1].replace("$", ""))] != registers[(int)(token[3].replace("$", ""))]:
-                                i = 0
-                                while True:
-                                    if i == len(gotos):
-                                        break
-                                    if gotos[i].split(", ")[0] == token[4]:
-                                        ip = (int)(gotos[i].split(", ")[1])
-                                    i += 1
-                        elif token[2] == ">":
-                            if registers[(int)(token[1].replace("$", ""))] > registers[(int)(token[3].replace("$", ""))]:
-                                i = 0
-                                while True:
-                                    if i == len(gotos):
-                                        break
-                                    if gotos[i].split(", ")[0] == token[4]:
-                                        ip = (int)(gotos[i].split(", ")[1])
-                                    i += 1
-                        elif token[2] == "<":
-                            if registers[(int)(token[1].replace("$", ""))] < registers[(int)(token[3].replace("$", ""))]:
-                                i = 0
-                                while True:
-                                    if i == len(gotos):
-                                        break
-                                    if gotos[i].split(", ")[0] == token[4]:
-                                        ip = (int)(gotos[i].split(", ")[1])
-                                    i += 1
-                        elif token[2] == ">=":
-                            if registers[(int)(token[1].replace("$", ""))] >= registers[(int)(token[3].replace("$", ""))]:
-                                i = 0
-                                while True:
-                                    if i == len(gotos):
-                                        break
-                                    if gotos[i].split(", ")[0] == token[4]:
-                                        ip = (int)(gotos[i].split(", ")[1])
-                                    i += 1
-                        elif token[2] == "<=":
-                            if registers[(int)(token[1].replace("$", ""))] <= registers[(int)(token[3].replace("$", ""))]:
-                                i = 0
-                                while True:
-                                    if i == len(gotos):
-                                        break
-                                    if gotos[i].split(", ")[0] == token[4]:
-                                        ip = (int)(gotos[i].split(", ")[1])
-                                    i += 1
+                    if registers[(int)(token[1])] == 1:
+                        i = 0
+                        while True:
+                            if i == len(gotos):
+                                break
+                            if gotos[i].split(", ")[0] == token[1]:
+                                ip = (int)(gotos[i].split(", ")[1])
+                            i += 1
             case "EXT":  # Exit
                 break
             case other:
