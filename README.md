@@ -5,7 +5,7 @@
 <div align="center"><h2>
 An assembly-ish thing intended to be used as a helper language for ALNOOR<br/><br/><a href="#">
     <img src="https://raw.githubusercontent.com/Raiyaxi-Ziaoi/Resources/main/alsabahlogo.png?token=GHSAT0AAAAAABXCMKG55OJFNHXZ5GYECFWIYYH3IBA" width="50%"/>
-</a><br/><br/>Made by Raiyaxi Ziaoi
+</a><br/><br/>Made by Abu Hurayrah
 </h2></div>
 
 Keywords: <br/>
